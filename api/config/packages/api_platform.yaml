@@ -31,6 +31,8 @@ api_platform:
     use_symfony_listeners: false
     event_listeners_backward_compatibility_layer: false
     keep_legacy_inflector: false
+    serializer:
+        hydra_prefix: true
     oauth:
         enabled: true
         clientId: '%env(OIDC_SWAGGER_CLIENT_ID)%'
