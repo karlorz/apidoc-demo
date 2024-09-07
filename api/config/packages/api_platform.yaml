@@ -20,6 +20,8 @@ api_platform:
         html: ['text/html']
     http_cache:
         public: true
+    serializer:
+        hydra_prefix: true
     # Good defaults for REST APIs
     defaults:
         stateless: true

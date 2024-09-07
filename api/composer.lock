@@ -4,190 +4,60 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "834f9e7aa8d6da7fd041cc59325d62fc",
+    "content-hash": "c2c2d9b1bf77f22b22f921360028dad7",
     "packages": [
         {
-            "name": "api-platform/core",
-            "version": "v4.0.0-alpha.3",
+            "name": "api-platform/doctrine-common",
+            "version": "v4.0.0-alpha.5",
             "source": {
                 "type": "git",
-                "url": "https://github.com/api-platform/core.git",
-                "reference": "93911b1039fffc5c5c9fe30529b75487e9786252"
+                "url": "https://github.com/api-platform/doctrine-common.git",
+                "reference": "4e1fe720743bfe1b851a137d142b7bbc85d01035"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/api-platform/core/zipball/93911b1039fffc5c5c9fe30529b75487e9786252",
-                "reference": "93911b1039fffc5c5c9fe30529b75487e9786252",
+                "url": "https://api.github.com/repos/api-platform/doctrine-common/zipball/4e1fe720743bfe1b851a137d142b7bbc85d01035",
+                "reference": "4e1fe720743bfe1b851a137d142b7bbc85d01035",
                 "shasum": ""
             },
             "require": {
-                "doctrine/inflector": "^1.0 || ^2.0",
-                "php": ">=8.1",
-                "psr/cache": "^1.0 || ^2.0 || ^3.0",
-                "psr/container": "^1.0 || ^2.0",
-                "symfony/deprecation-contracts": "^3.1",
-                "symfony/http-foundation": "^6.4 || ^7.1",
-                "symfony/http-kernel": "^6.4 || ^7.1",
-                "symfony/property-access": "^6.4 || ^7.1",
-                "symfony/property-info": "^6.4 || ^7.1",
-                "symfony/serializer": "^6.4 || ^7.1",
-                "symfony/translation-contracts": "^3.3",
-                "symfony/web-link": "^6.4 || ^7.1",
-                "willdurand/negotiation": "^3.1"
+                "api-platform/metadata": "^3.4 || ^4.0",
+                "api-platform/state": "^3.4 || ^4.0",
+                "doctrine/collections": "^2.1",
+                "doctrine/common": "^3.2.2",
+                "doctrine/persistence": "^3.2",
+                "php": ">=8.1"
             },
             "conflict": {
-                "doctrine/common": "<3.2.2",
-                "doctrine/dbal": "<2.10",
-                "doctrine/mongodb-odm": "<2.4",
-                "doctrine/orm": "<2.14.0",
-                "doctrine/persistence": "<1.3",
-                "phpspec/prophecy": "<1.15",
-                "phpunit/phpunit": "<9.5",
-                "symfony/framework-bundle": "6.4.6 || 7.1.6",
-                "symfony/var-exporter": "<6.1.1"
+                "doctrine/persistence": "<1.3"
             },
             "require-dev": {
-                "api-platform/doctrine-common": "@dev || ^3.2 || ^4.0",
-                "api-platform/doctrine-odm": "@dev || ^3.2 || ^4.0",
-                "api-platform/doctrine-orm": "@dev || ^3.2 || ^4.0",
-                "api-platform/documentation": "@dev || ^3.2 || ^4.0",
-                "api-platform/elasticsearch": "@dev || ^3.2 || ^4.0",
-                "api-platform/graphql": "@dev || ^3.2 || ^4.0",
-                "api-platform/http-cache": "@dev || ^3.2 || ^4.0",
-                "api-platform/hydra": "@dev || ^3.2 || ^4.0",
-                "api-platform/json-api": "@dev || ^3.2 || ^4.0",
-                "api-platform/json-schema": "@dev || ^3.2 || ^4.0",
-                "api-platform/jsonld": "@dev || ^3.2 || ^4.0",
-                "api-platform/metadata": "@dev || ^3.2 || ^4.0",
-                "api-platform/openapi": "@dev || ^3.2 || ^4.0",
-                "api-platform/ramsey-uuid": "@dev || ^3.2 || ^4.0",
-                "api-platform/serializer": "@dev || ^3.2 || ^4.0",
-                "api-platform/state": "@dev || ^3.2 || ^4.0",
-                "api-platform/validator": "@dev || ^3.2 || ^4.0",
-                "behat/behat": "^3.11",
-                "behat/mink": "^1.9",
-                "doctrine/cache": "^1.11 || ^2.1",
-                "doctrine/common": "^3.2.2",
-                "doctrine/dbal": "^4.0",
-                "doctrine/doctrine-bundle": "^2.11",
                 "doctrine/mongodb-odm": "^2.6",
-                "doctrine/mongodb-odm-bundle": "^4.0 || ^5.0",
                 "doctrine/orm": "^2.17 || ^3.0",
-                "elasticsearch/elasticsearch": "^8.4",
-                "friends-of-behat/mink-browserkit-driver": "^1.3.1",
-                "friends-of-behat/mink-extension": "^2.2",
-                "friends-of-behat/symfony-extension": "^2.1",
-                "guzzlehttp/guzzle": "^6.0 || ^7.0",
-                "illuminate/config": "^11.0",
-                "illuminate/contracts": "^11.0",
-                "illuminate/database": "^11.0",
-                "illuminate/http": "^11.0",
-                "illuminate/pagination": "^11.0",
-                "illuminate/routing": "^11.0",
-                "illuminate/support": "^11.0",
-                "jangregor/phpstan-prophecy": "^1.0",
-                "justinrainbow/json-schema": "^5.2.11",
-                "laravel/framework": "^11.0",
-                "orchestra/testbench": "^9.1",
                 "phpspec/prophecy-phpunit": "^2.2",
-                "phpstan/extension-installer": "^1.1",
-                "phpstan/phpdoc-parser": "^1.13",
-                "phpstan/phpstan": "^1.10",
-                "phpstan/phpstan-doctrine": "^1.0",
-                "phpstan/phpstan-phpunit": "^1.0",
-                "phpstan/phpstan-symfony": "^1.0",
-                "phpunit/phpunit": "^11.2",
-                "psr/log": "^1.0 || ^2.0 || ^3.0",
-                "ramsey/uuid": "^4.0",
-                "ramsey/uuid-doctrine": "^2.0",
-                "soyuka/contexts": "^3.3.10",
-                "soyuka/pmu": "^0.0.5",
-                "soyuka/stubs-mongodb": "^1.0",
-                "symfony/asset": "^6.4 || ^7.1",
-                "symfony/browser-kit": "^6.4 || ^7.1",
-                "symfony/cache": "^6.4 || ^7.1",
-                "symfony/config": "^6.4 || ^7.1",
-                "symfony/console": "^6.4 || ^7.1",
-                "symfony/css-selector": "^6.4 || ^7.1",
-                "symfony/dependency-injection": "^6.4 || ^7.1",
-                "symfony/doctrine-bridge": "^6.4.2 || ^7.1.2",
-                "symfony/dom-crawler": "^6.4 || ^7.1",
-                "symfony/error-handler": "^6.4 || ^7.1",
-                "symfony/event-dispatcher": "^6.4 || ^7.1",
-                "symfony/expression-language": "^6.4 || ^7.1",
-                "symfony/finder": "^6.4 || ^7.1",
-                "symfony/form": "^6.4 || ^7.1",
-                "symfony/framework-bundle": "^6.4 || ^7.1",
-                "symfony/http-client": "^6.4 || ^7.1",
-                "symfony/intl": "^6.4 || ^7.1",
-                "symfony/maker-bundle": "^1.24",
-                "symfony/mercure-bundle": "*",
-                "symfony/messenger": "^6.4 || ^7.1",
-                "symfony/routing": "^6.4 || ^7.1",
-                "symfony/security-bundle": "^6.4 || ^7.1",
-                "symfony/security-core": "^6.4 || ^7.1",
-                "symfony/stopwatch": "^6.4 || ^7.1",
-                "symfony/string": "^6.4 || ^7.1",
-                "symfony/twig-bundle": "^6.4 || ^7.1",
-                "symfony/uid": "^6.4 || ^7.1",
-                "symfony/validator": "^6.4 || ^7.1",
-                "symfony/web-profiler-bundle": "^6.4 || ^7.1",
-                "symfony/yaml": "^6.4 || ^7.1",
-                "twig/twig": "^1.42.3 || ^2.12 || ^3.0",
-                "webonyx/graphql-php": "^15.0"
+                "phpunit/phpunit": "^11.2"
             },
             "suggest": {
-                "doctrine/mongodb-odm-bundle": "To support MongoDB. Only versions 4.0 and later are supported.",
-                "elasticsearch/elasticsearch": "To support Elasticsearch.",
-                "ocramius/package-versions": "To display the API Platform's version in the debug bar.",
-                "phpstan/phpdoc-parser": "To support extracting metadata from PHPDoc.",
-                "psr/cache-implementation": "To use metadata caching.",
-                "ramsey/uuid": "To support Ramsey's UUID identifiers.",
-                "symfony/cache": "To have metadata caching when using Symfony integration.",
-                "symfony/config": "To load XML configuration files.",
-                "symfony/expression-language": "To use authorization features.",
-                "symfony/http-client": "To use the HTTP cache invalidation system.",
-                "symfony/messenger": "To support messenger integration.",
-                "symfony/security": "To use authorization features.",
-                "symfony/twig-bundle": "To use the Swagger UI integration.",
-                "symfony/uid": "To support Symfony UUID/ULID identifiers.",
-                "symfony/web-profiler-bundle": "To use the data collector.",
-                "webonyx/graphql-php": "To support GraphQL."
+                "api-platform/graphql": "For GraphQl mercure subscriptions.",
+                "api-platform/http-cache": "For HTTP cache invalidation.",
+                "phpstan/phpdoc-parser": "For PHP documentation support.",
+                "symfony/config": "For XML resource configuration.",
+                "symfony/mercure-bundle": "For mercure updates publisher.",
+                "symfony/yaml": "For YAML resource configuration."
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-3.4": "3.4.x-dev",
-                    "dev-main": "4.0.x-dev"
+                    "dev-main": "4.0.x-dev",
+                    "dev-3.4": "3.4.x-dev"
                 },
                 "symfony": {
                     "require": "^6.4 || ^7.1"
-                },
-                "projects": [
-                    "api-platform/doctrine-common",
-                    "api-platform/doctrine-orm",
-                    "api-platform/doctrine-odm",
-                    "api-platform/metadata",
-                    "api-platform/json-schema",
-                    "api-platform/elasticsearch",
-                    "api-platform/jsonld",
-                    "api-platform/hydra",
-                    "api-platform/openapi",
-                    "api-platform/graphql",
-                    "api-platform/http-cache",
-                    "api-platform/documentation",
-                    "api-platform/ramsey-uuid",
-                    "api-platform/serializer",
-                    "api-platform/state",
-                    "api-platform/symfony",
-                    "api-platform/validator",
-                    "api-platform/laravel",
-                    "api-platform/json-api"
-                ]
+                }
             },
             "autoload": {
                 "psr-4": {
-                    "ApiPlatform\\": "src/"
+                    "ApiPlatform\\Doctrine\\Common\\": ""
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -199,9 +69,380 @@
                     "name": "Kévin Dunglas",
                     "email": "kevin@dunglas.fr",
                     "homepage": "https://dunglas.fr"
+                },
+                {
+                    "name": "API Platform Community",
+                    "homepage": "https://api-platform.com/community/contributors"
                 }
             ],
-            "description": "Build a fully-featured hypermedia or GraphQL API in minutes!",
+            "description": "Common files used by api-platform/doctrine-orm and api-platform/doctrine-odm",
+            "homepage": "https://api-platform.com",
+            "keywords": [
+                "common",
+                "doctrine",
+                "odm",
+                "orm"
+            ],
+            "support": {
+                "issues": "https://github.com/api-platform/doctrine-common/issues",
+                "source": "https://github.com/api-platform/doctrine-common/tree/v4.0.0-alpha.5"
+            },
+            "time": "2024-09-06T06:35:15+00:00"
+        },
+        {
+            "name": "api-platform/doctrine-orm",
+            "version": "v4.0.0-alpha.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/api-platform/doctrine-orm.git",
+                "reference": "e21f9b5cac18c86fbd6f2fa7fd8bb9a2ab8f6da6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/api-platform/doctrine-orm/zipball/e21f9b5cac18c86fbd6f2fa7fd8bb9a2ab8f6da6",
+                "reference": "e21f9b5cac18c86fbd6f2fa7fd8bb9a2ab8f6da6",
+                "shasum": ""
+            },
+            "require": {
+                "api-platform/doctrine-common": "^3.4 || ^4.0",
+                "api-platform/metadata": "^3.4 || ^4.0",
+                "api-platform/state": "^3.4 || ^4.0",
+                "doctrine/doctrine-bundle": "^2.11",
+                "doctrine/orm": "^2.17 || ^3.0",
+                "php": ">=8.1",
+                "symfony/property-info": "^6.4 || ^7.1"
+            },
+            "require-dev": {
+                "phpspec/prophecy-phpunit": "^2.2",
+                "phpunit/phpunit": "^11.2",
+                "ramsey/uuid": "^4.0",
+                "ramsey/uuid-doctrine": "^2.0",
+                "symfony/cache": "^6.4 || ^7.1",
+                "symfony/framework-bundle": "^6.4 || ^7.1",
+                "symfony/property-access": "^6.4 || ^7.0",
+                "symfony/serializer": "^6.4 || ^7.0",
+                "symfony/uid": "^6.4 || ^7.1",
+                "symfony/validator": "^6.4 || ^7.1",
+                "symfony/yaml": "^6.4 || ^7.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "4.0.x-dev",
+                    "dev-3.4": "3.4.x-dev"
+                },
+                "symfony": {
+                    "require": "^6.4 || ^7.1"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ApiPlatform\\Doctrine\\Orm\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kévin Dunglas",
+                    "email": "kevin@dunglas.fr",
+                    "homepage": "https://dunglas.fr"
+                },
+                {
+                    "name": "API Platform Community",
+                    "homepage": "https://api-platform.com/community/contributors"
+                }
+            ],
+            "description": "Doctrine ORM bridge",
+            "homepage": "https://api-platform.com",
+            "keywords": [
+                "doctrine",
+                "orm"
+            ],
+            "support": {
+                "issues": "https://github.com/api-platform/doctrine-orm/issues",
+                "source": "https://github.com/api-platform/doctrine-orm/tree/v4.0.0-alpha.5"
+            },
+            "time": "2024-09-06T06:35:15+00:00"
+        },
+        {
+            "name": "api-platform/documentation",
+            "version": "v4.0.0-alpha.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/api-platform/documentation.git",
+                "reference": "7d47af201959ba1cf1b66eabca882cd5e68198c2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/api-platform/documentation/zipball/7d47af201959ba1cf1b66eabca882cd5e68198c2",
+                "reference": "7d47af201959ba1cf1b66eabca882cd5e68198c2",
+                "shasum": ""
+            },
+            "require": {
+                "api-platform/metadata": "^3.4 || ^4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^11.2"
+            },
+            "type": "project",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "4.0.x-dev",
+                    "dev-3.4": "3.4.x-dev"
+                },
+                "symfony": {
+                    "require": "^6.4 || ^7.1"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ApiPlatform\\Documentation\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kévin Dunglas",
+                    "email": "kevin@dunglas.fr",
+                    "homepage": "https://dunglas.fr"
+                },
+                {
+                    "name": "API Platform Community",
+                    "homepage": "https://api-platform.com/community/contributors"
+                }
+            ],
+            "description": "API Platform documentation controller.",
+            "support": {
+                "issues": "https://github.com/api-platform/documentation/issues",
+                "source": "https://github.com/api-platform/documentation/tree/v4.0.0-alpha.5"
+            },
+            "time": "2024-09-06T14:47:50+00:00"
+        },
+        {
+            "name": "api-platform/graphql",
+            "version": "v4.0.0-alpha.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/api-platform/graphql.git",
+                "reference": "6773116038a18a9d26c1685995ef1a66131a10fd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/api-platform/graphql/zipball/6773116038a18a9d26c1685995ef1a66131a10fd",
+                "reference": "6773116038a18a9d26c1685995ef1a66131a10fd",
+                "shasum": ""
+            },
+            "require": {
+                "api-platform/metadata": "^3.4 || ^4.0",
+                "api-platform/serializer": "^3.4 || ^4.0",
+                "api-platform/state": "^3.4 || ^4.0",
+                "php": ">=8.1",
+                "symfony/property-info": "^6.4 || ^7.1",
+                "symfony/serializer": "^6.4 || ^7.1",
+                "webonyx/graphql-php": "^14.0 || ^15.0",
+                "willdurand/negotiation": "^3.1"
+            },
+            "require-dev": {
+                "api-platform/validator": "^3.4 || ^4.0",
+                "phpspec/prophecy-phpunit": "^2.2",
+                "phpunit/phpunit": "^11.2",
+                "symfony/mercure-bundle": "*",
+                "symfony/routing": "^6.4 || ^7.1",
+                "twig/twig": "^3.7"
+            },
+            "suggest": {
+                "api-platform/doctrine-odm": "To support doctrine ODM state options.",
+                "api-platform/doctrine-orm": "To support doctrine ORM state options.",
+                "api-platform/validator": "To support validation."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "4.0.x-dev",
+                    "dev-3.4": "3.4.x-dev"
+                },
+                "symfony": {
+                    "require": "^6.4 || ^7.1"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ApiPlatform\\GraphQl\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kévin Dunglas",
+                    "email": "kevin@dunglas.fr",
+                    "homepage": "https://dunglas.fr"
+                },
+                {
+                    "name": "API Platform Community",
+                    "homepage": "https://api-platform.com/community/contributors"
+                }
+            ],
+            "description": "Build GraphQL API endpoints",
+            "homepage": "https://api-platform.com",
+            "keywords": [
+                "api",
+                "graphql"
+            ],
+            "support": {
+                "source": "https://github.com/api-platform/graphql/tree/v4.0.0-alpha.5"
+            },
+            "time": "2024-09-06T06:35:15+00:00"
+        },
+        {
+            "name": "api-platform/http-cache",
+            "version": "v4.0.0-alpha.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/api-platform/http-cache.git",
+                "reference": "7bd20fe11f1a6a66687581c528d38090d020b88a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/api-platform/http-cache/zipball/7bd20fe11f1a6a66687581c528d38090d020b88a",
+                "reference": "7bd20fe11f1a6a66687581c528d38090d020b88a",
+                "shasum": ""
+            },
+            "require": {
+                "api-platform/metadata": "^3.4 || ^4.0",
+                "api-platform/state": "^3.4 || ^4.0",
+                "php": ">=8.1",
+                "symfony/http-foundation": "^6.4 || ^7.1"
+            },
+            "require-dev": {
+                "guzzlehttp/guzzle": "^6.0 || ^7.0",
+                "phpspec/prophecy-phpunit": "^2.2",
+                "phpunit/phpunit": "^11.2",
+                "symfony/dependency-injection": "^6.4 || ^7.1",
+                "symfony/http-client": "^6.4 || ^7.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "4.0.x-dev",
+                    "dev-3.4": "3.4.x-dev"
+                },
+                "symfony": {
+                    "require": "^6.4 || ^7.1"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ApiPlatform\\HttpCache\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kévin Dunglas",
+                    "email": "kevin@dunglas.fr",
+                    "homepage": "https://dunglas.fr"
+                },
+                {
+                    "name": "API Platform Community",
+                    "homepage": "https://api-platform.com/comunnity/contributors"
+                }
+            ],
+            "description": "API Platform HttpCache component",
+            "homepage": "https://api-platform.com",
+            "keywords": [
+                "cache",
+                "http"
+            ],
+            "support": {
+                "issues": "https://github.com/api-platform/http-cache/issues",
+                "source": "https://github.com/api-platform/http-cache/tree/v4.0.0-alpha.5"
+            },
+            "time": "2024-09-06T06:35:15+00:00"
+        },
+        {
+            "name": "api-platform/hydra",
+            "version": "v4.0.0-alpha.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/api-platform/hydra.git",
+                "reference": "709028156af126b4ecbe98f2595da5dc8600a531"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/api-platform/hydra/zipball/709028156af126b4ecbe98f2595da5dc8600a531",
+                "reference": "709028156af126b4ecbe98f2595da5dc8600a531",
+                "shasum": ""
+            },
+            "require": {
+                "api-platform/documentation": "^3.4 || ^4.0",
+                "api-platform/json-schema": "^3.4 || ^4.0",
+                "api-platform/jsonld": "^3.4 || ^4.0",
+                "api-platform/metadata": "^3.4 || ^4.0",
+                "api-platform/serializer": "^3.4 || ^4.0",
+                "api-platform/state": "^3.4 || ^4.0",
+                "php": ">=8.1",
+                "symfony/web-link": "^6.4 || ^7.1"
+            },
+            "require-dev": {
+                "api-platform/doctrine-common": "^3.4 || ^4.0",
+                "api-platform/doctrine-odm": "^3.4 || ^4.0",
+                "api-platform/doctrine-orm": "^3.4 || ^4.0",
+                "phpspec/prophecy": "^1.19",
+                "phpspec/prophecy-phpunit": "^2.2",
+                "phpunit/phpunit": "^11.2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "4.0.x-dev",
+                    "dev-3.4": "3.4.x-dev"
+                },
+                "symfony": {
+                    "require": "^6.4 || ^7.1"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ApiPlatform\\Hydra\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kévin Dunglas",
+                    "email": "kevin@dunglas.fr",
+                    "homepage": "https://dunglas.fr"
+                },
+                {
+                    "name": "API Platform Community",
+                    "homepage": "https://api-platform.com/community/contributors"
+                }
+            ],
+            "description": "API Hydra support",
             "homepage": "https://api-platform.com",
             "keywords": [
                 "Hydra",
@@ -215,10 +456,689 @@
                 "swagger"
             ],
             "support": {
-                "issues": "https://github.com/api-platform/core/issues",
-                "source": "https://github.com/api-platform/core/tree/v4.0.0-alpha.3"
+                "issues": "https://github.com/api-platform/hydra/issues",
+                "source": "https://github.com/api-platform/hydra/tree/v4.0.0-alpha.5"
             },
-            "time": "2024-08-13T09:38:46+00:00"
+            "time": "2024-09-06T13:11:14+00:00"
+        },
+        {
+            "name": "api-platform/json-schema",
+            "version": "v4.0.0-alpha.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/api-platform/json-schema.git",
+                "reference": "e5c9d3d2168a92f6f5269f974cc0274e92a05e4c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/api-platform/json-schema/zipball/e5c9d3d2168a92f6f5269f974cc0274e92a05e4c",
+                "reference": "e5c9d3d2168a92f6f5269f974cc0274e92a05e4c",
+                "shasum": ""
+            },
+            "require": {
+                "api-platform/metadata": "^3.4 || ^4.0",
+                "php": ">=8.1",
+                "symfony/console": "^6.4 || ^7.0",
+                "symfony/property-info": "^6.4 || ^7.1",
+                "symfony/serializer": "^6.4 || ^7.1",
+                "symfony/uid": "^6.4 || ^7.0"
+            },
+            "require-dev": {
+                "phpspec/prophecy-phpunit": "^2.2",
+                "phpunit/phpunit": "^11.2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "4.0.x-dev",
+                    "dev-3.4": "3.4.x-dev"
+                },
+                "symfony": {
+                    "require": "^6.4 || ^7.1"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ApiPlatform\\JsonSchema\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kévin Dunglas",
+                    "email": "kevin@dunglas.fr",
+                    "homepage": "https://dunglas.fr"
+                },
+                {
+                    "name": "API Platform Community",
+                    "homepage": "https://api-platform.com/community/contributors"
+                }
+            ],
+            "description": "Generate a JSON Schema from a PHP class",
+            "homepage": "https://api-platform.com",
+            "keywords": [
+                "JSON Schema",
+                "api",
+                "json",
+                "openapi",
+                "rest",
+                "swagger"
+            ],
+            "support": {
+                "source": "https://github.com/api-platform/json-schema/tree/v4.0.0-alpha.5"
+            },
+            "time": "2024-09-06T06:35:15+00:00"
+        },
+        {
+            "name": "api-platform/jsonld",
+            "version": "v4.0.0-alpha.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/api-platform/jsonld.git",
+                "reference": "47542dbf6bcdac7057909192afff3cee09ab432d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/api-platform/jsonld/zipball/47542dbf6bcdac7057909192afff3cee09ab432d",
+                "reference": "47542dbf6bcdac7057909192afff3cee09ab432d",
+                "shasum": ""
+            },
+            "require": {
+                "api-platform/metadata": "^3.4 || ^4.0",
+                "api-platform/serializer": "^3.4 || ^4.0",
+                "api-platform/state": "^3.4 || ^4.0",
+                "php": ">=8.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^11.2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "4.0.x-dev",
+                    "dev-3.4": "3.4.x-dev"
+                },
+                "symfony": {
+                    "require": "^6.4 || ^7.1"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ApiPlatform\\JsonLd\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kévin Dunglas",
+                    "email": "kevin@dunglas.fr",
+                    "homepage": "https://dunglas.fr"
+                },
+                {
+                    "name": "API Platform Community",
+                    "homepage": "https://api-platform.com/community/contributors"
+                }
+            ],
+            "description": "API JSON-LD support",
+            "homepage": "https://api-platform.com",
+            "keywords": [
+                "Hydra",
+                "JSON-LD",
+                "api",
+                "graphql",
+                "hal",
+                "jsonapi",
+                "openapi",
+                "rest",
+                "swagger"
+            ],
+            "support": {
+                "issues": "https://github.com/api-platform/jsonld/issues",
+                "source": "https://github.com/api-platform/jsonld/tree/v4.0.0-alpha.5"
+            },
+            "time": "2024-09-06T09:06:56+00:00"
+        },
+        {
+            "name": "api-platform/metadata",
+            "version": "v4.0.0-alpha.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/api-platform/metadata.git",
+                "reference": "7f1eb9cf4bbe9c34481114e269193474d0864998"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/api-platform/metadata/zipball/7f1eb9cf4bbe9c34481114e269193474d0864998",
+                "reference": "7f1eb9cf4bbe9c34481114e269193474d0864998",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/inflector": "^1.0 || ^2.0",
+                "php": ">=8.1",
+                "psr/cache": "^1.0 || ^2.0 || ^3.0",
+                "psr/log": "^1.0 || ^2.0 || ^3.0",
+                "symfony/property-info": "^6.4 || ^7.1",
+                "symfony/string": "^6.4 || ^7.0",
+                "symfony/type-info": "^7.1"
+            },
+            "require-dev": {
+                "api-platform/json-schema": "^3.4 || ^4.0",
+                "api-platform/openapi": "^3.4 || ^4.0",
+                "api-platform/state": "^3.4 || ^4.0",
+                "phpspec/prophecy-phpunit": "^2.0",
+                "phpstan/phpdoc-parser": "^1.16",
+                "phpunit/phpunit": "^11.2",
+                "symfony/config": "^6.4 || 7.1",
+                "symfony/routing": "^6.4 || ^7.1",
+                "symfony/var-dumper": "^6.4 || ^7.0",
+                "symfony/web-link": "^6.4 || ^7.0",
+                "symfony/yaml": "^6.4 || ^7.1"
+            },
+            "suggest": {
+                "phpstan/phpdoc-parser": "For PHP documentation support.",
+                "symfony/config": "For XML resource configuration.",
+                "symfony/yaml": "For YAML resource configuration."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "4.0.x-dev",
+                    "dev-3.4": "3.4.x-dev"
+                },
+                "symfony": {
+                    "require": "^6.4 || ^7.1"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ApiPlatform\\Metadata\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kévin Dunglas",
+                    "email": "kevin@dunglas.fr",
+                    "homepage": "https://dunglas.fr"
+                },
+                {
+                    "name": "API Platform Community",
+                    "homepage": "https://api-platform.com/community/contributors"
+                }
+            ],
+            "description": "API Resource-oriented metadata attributes and factories",
+            "homepage": "https://api-platform.com",
+            "keywords": [
+                "Hydra",
+                "JSON-LD",
+                "api",
+                "graphql",
+                "hal",
+                "jsonapi",
+                "openapi",
+                "rest",
+                "swagger"
+            ],
+            "support": {
+                "source": "https://github.com/api-platform/metadata/tree/v4.0.0-alpha.5"
+            },
+            "time": "2024-09-06T14:47:50+00:00"
+        },
+        {
+            "name": "api-platform/openapi",
+            "version": "v4.0.0-alpha.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/api-platform/openapi.git",
+                "reference": "c811464bcecfd54c2cd8d2432bec71ecc75c7190"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/api-platform/openapi/zipball/c811464bcecfd54c2cd8d2432bec71ecc75c7190",
+                "reference": "c811464bcecfd54c2cd8d2432bec71ecc75c7190",
+                "shasum": ""
+            },
+            "require": {
+                "api-platform/json-schema": "^3.4 || ^4.0",
+                "api-platform/metadata": "^3.4 || ^4.0",
+                "api-platform/state": "^3.4 || ^4.0",
+                "php": ">=8.1",
+                "symfony/console": "^6.4 || ^7.0",
+                "symfony/property-access": "^6.4 || ^7.1",
+                "symfony/serializer": "^6.4 || ^7.1"
+            },
+            "require-dev": {
+                "api-platform/doctrine-common": "^3.4 || ^4.0",
+                "api-platform/doctrine-odm": "^3.4 || ^4.0",
+                "api-platform/doctrine-orm": "^3.4 || ^4.0",
+                "phpspec/prophecy-phpunit": "^2.0",
+                "phpunit/phpunit": "^11.2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "4.0.x-dev",
+                    "dev-3.4": "3.4.x-dev"
+                },
+                "symfony": {
+                    "require": "^6.4 || ^7.1"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ApiPlatform\\OpenApi\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kévin Dunglas",
+                    "email": "kevin@dunglas.fr",
+                    "homepage": "https://dunglas.fr"
+                },
+                {
+                    "name": "API Platform Community",
+                    "homepage": "https://api-platform.com/community/contributors"
+                }
+            ],
+            "description": "Models to build and serialize an OpenAPI specification.",
+            "homepage": "https://api-platform.com",
+            "keywords": [
+                "Hydra",
+                "JSON-LD",
+                "api",
+                "graphql",
+                "hal",
+                "jsonapi",
+                "openapi",
+                "rest",
+                "swagger"
+            ],
+            "support": {
+                "source": "https://github.com/api-platform/openapi/tree/v4.0.0-alpha.5"
+            },
+            "time": "2024-09-06T13:11:14+00:00"
+        },
+        {
+            "name": "api-platform/serializer",
+            "version": "v4.0.0-alpha.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/api-platform/serializer.git",
+                "reference": "b1ef30f1e15a490f6db57f3ea5658bbd16b4af56"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/api-platform/serializer/zipball/b1ef30f1e15a490f6db57f3ea5658bbd16b4af56",
+                "reference": "b1ef30f1e15a490f6db57f3ea5658bbd16b4af56",
+                "shasum": ""
+            },
+            "require": {
+                "api-platform/metadata": "^3.4 || ^4.0",
+                "api-platform/state": "^3.4 || ^4.0",
+                "doctrine/collections": "^2.1",
+                "php": ">=8.1",
+                "symfony/property-access": "^6.4 || ^7.1",
+                "symfony/property-info": "^6.4 || ^7.1",
+                "symfony/serializer": "^6.4 || ^7.1",
+                "symfony/validator": "^6.4 || ^7.0"
+            },
+            "require-dev": {
+                "api-platform/doctrine-common": "^3.2 || ^4.0",
+                "api-platform/doctrine-odm": "^3.2 || ^4.0",
+                "api-platform/doctrine-orm": "^3.2 || ^4.0",
+                "api-platform/json-schema": "^3.2 || ^4.0",
+                "api-platform/openapi": "^3.2 || ^4.0",
+                "phpspec/prophecy-phpunit": "^2.2",
+                "phpunit/phpunit": "^11.2",
+                "symfony/mercure-bundle": "*",
+                "symfony/var-dumper": "^6.4 || ^7.0",
+                "symfony/yaml": "^6.4 || ^7.1"
+            },
+            "suggest": {
+                "api-platform/doctrine-orm": "To support doctrine ORM state options."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "4.0.x-dev",
+                    "dev-3.4": "3.4.x-dev"
+                },
+                "symfony": {
+                    "require": "^6.4 || ^7.1"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ApiPlatform\\Serializer\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kévin Dunglas",
+                    "email": "kevin@dunglas.fr",
+                    "homepage": "https://dunglas.fr"
+                },
+                {
+                    "name": "API Platform Community",
+                    "homepage": "https://api-platform.com/community/contributors"
+                }
+            ],
+            "description": "API Platform core Serializer",
+            "homepage": "https://api-platform.com",
+            "keywords": [
+                "api",
+                "serializer"
+            ],
+            "support": {
+                "issues": "https://github.com/api-platform/serializer/issues",
+                "source": "https://github.com/api-platform/serializer/tree/v4.0.0-alpha.5"
+            },
+            "time": "2024-09-06T06:35:15+00:00"
+        },
+        {
+            "name": "api-platform/state",
+            "version": "v4.0.0-alpha.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/api-platform/state.git",
+                "reference": "e7c2d7c0db28eeab69832aab579b8cd390697ca4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/api-platform/state/zipball/e7c2d7c0db28eeab69832aab579b8cd390697ca4",
+                "reference": "e7c2d7c0db28eeab69832aab579b8cd390697ca4",
+                "shasum": ""
+            },
+            "require": {
+                "api-platform/metadata": "^3.4 || ^4.0",
+                "php": ">=8.1",
+                "psr/container": "^1.0 || ^2.0"
+            },
+            "require-dev": {
+                "api-platform/serializer": "^3.4 || ^4.0",
+                "api-platform/validator": "^3.4 || ^4.0",
+                "phpunit/phpunit": "^11.2",
+                "symfony/http-foundation": "^6.4 || 7.0",
+                "symfony/web-link": "^6.4 || ^7.0",
+                "willdurand/negotiation": "^3.1"
+            },
+            "suggest": {
+                "api-platform/serializer": "To use API Platform serializer.",
+                "api-platform/validator": "To use API Platform validation.",
+                "symfony/http-foundation": "To use our HTTP providers and processor.",
+                "symfony/web-link": "To support adding web links to the response headers.",
+                "willdurand/negotiation": "To use the API Platform content negoatiation provider."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "4.0.x-dev",
+                    "dev-3.4": "3.4.x-dev"
+                },
+                "symfony": {
+                    "require": "^6.4 || ^7.1"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ApiPlatform\\State\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kévin Dunglas",
+                    "email": "kevin@dunglas.fr",
+                    "homepage": "https://dunglas.fr"
+                },
+                {
+                    "name": "API Platform Community",
+                    "homepage": "https://api-platform.com/community/contributors"
+                }
+            ],
+            "description": "API Platform State component ",
+            "homepage": "https://api-platform.com",
+            "keywords": [
+                "Hydra",
+                "JSON-LD",
+                "api",
+                "graphql",
+                "hal",
+                "jsonapi",
+                "openapi",
+                "rest",
+                "swagger"
+            ],
+            "support": {
+                "source": "https://github.com/api-platform/state/tree/v4.0.0-alpha.5"
+            },
+            "time": "2024-09-06T14:47:50+00:00"
+        },
+        {
+            "name": "api-platform/symfony",
+            "version": "v4.0.0-alpha.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/api-platform/symfony.git",
+                "reference": "691efeb73ce1f804c353d68f851311accc841610"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/api-platform/symfony/zipball/691efeb73ce1f804c353d68f851311accc841610",
+                "reference": "691efeb73ce1f804c353d68f851311accc841610",
+                "shasum": ""
+            },
+            "require": {
+                "api-platform/documentation": "^3.4 || ^4.0",
+                "api-platform/http-cache": "^3.4 || ^4.0",
+                "api-platform/hydra": "^3.4 || ^4.0",
+                "api-platform/json-schema": "^3.4 || ^4.0",
+                "api-platform/jsonld": "^3.4 || ^4.0",
+                "api-platform/metadata": "^3.4 || ^4.0",
+                "api-platform/openapi": "^3.4 || ^4.0",
+                "api-platform/serializer": "^3.4 || ^4.0",
+                "api-platform/state": "^3.4 || ^4.0",
+                "api-platform/validator": "^3.4 || ^4.0",
+                "php": ">=8.1",
+                "symfony/property-access": "^6.4 || ^7.1",
+                "symfony/property-info": "^6.4 || ^7.1",
+                "symfony/security-core": "^6.4 || ^7.0",
+                "symfony/serializer": "^6.4 || ^7.1",
+                "willdurand/negotiation": "^3.0"
+            },
+            "require-dev": {
+                "api-platform/doctrine-common": "^3.4 || ^4.0",
+                "api-platform/doctrine-odm": "^3.4 || ^4.0",
+                "api-platform/doctrine-orm": "^3.4 || ^4.0",
+                "api-platform/elasticsearch": "^3.4 || ^4.0",
+                "api-platform/graphql": "^3.4 || ^4.0",
+                "api-platform/parameter-validator": "^3.1",
+                "phpspec/prophecy-phpunit": "^2.2",
+                "phpunit/phpunit": "^11.2",
+                "symfony/expression-language": "^6.4 || ^7.1",
+                "symfony/mercure-bundle": "*",
+                "symfony/routing": "^6.4 || ^7.1",
+                "symfony/validator": "^6.4 || ^7.1",
+                "webonyx/graphql-php": "^14.0 || ^15.0"
+            },
+            "suggest": {
+                "api-platform/doctrine-odm": "To support MongoDB. Only versions 4.0 and later are supported.",
+                "api-platform/doctrine-orm": "To support Doctrine ORM.",
+                "api-platform/elasticsearch": "To support Elasticsearch.",
+                "api-platform/graphql": "To support GraphQL.",
+                "ocramius/package-versions": "To display the API Platform's version in the debug bar.",
+                "phpstan/phpdoc-parser": "To support extracting metadata from PHPDoc.",
+                "psr/cache-implementation": "To use metadata caching.",
+                "ramsey/uuid": "To support Ramsey's UUID identifiers.",
+                "symfony/cache": "To have metadata caching when using Symfony integration.",
+                "symfony/config": "To load XML configuration files.",
+                "symfony/expression-language": "To use authorization and mercure advanced features.",
+                "symfony/http-client": "To use the HTTP cache invalidation system.",
+                "symfony/mercure-bundle": "To support mercure integration.",
+                "symfony/messenger": "To support messenger integration and asynchronous Mercure updates.",
+                "symfony/security": "To use authorization features.",
+                "symfony/twig-bundle": "To use the Swagger UI integration.",
+                "symfony/uid": "To support Symfony UUID/ULID identifiers.",
+                "symfony/web-profiler-bundle": "To use the data collector."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "4.0.x-dev",
+                    "dev-3.4": "3.4.x-dev"
+                },
+                "symfony": {
+                    "require": "^6.4 || ^7.1"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ApiPlatform\\Symfony\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kévin Dunglas",
+                    "email": "kevin@dunglas.fr",
+                    "homepage": "https://dunglas.fr"
+                },
+                {
+                    "name": "API Platform Community",
+                    "homepage": "https://api-platform.com/community/contributors"
+                }
+            ],
+            "description": "Symfony API Platform integration",
+            "homepage": "https://api-platform.com",
+            "keywords": [
+                "Hydra",
+                "JSON-LD",
+                "api",
+                "graphql",
+                "hal",
+                "jsonapi",
+                "openapi",
+                "rest",
+                "swagger",
+                "symfony"
+            ],
+            "support": {
+                "issues": "https://github.com/api-platform/symfony/issues",
+                "source": "https://github.com/api-platform/symfony/tree/v4.0.0-alpha.5"
+            },
+            "time": "2024-09-06T14:47:50+00:00"
+        },
+        {
+            "name": "api-platform/validator",
+            "version": "v4.0.0-alpha.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/api-platform/validator.git",
+                "reference": "7936503db0c9fd3411b8cf9fba234b22999656fd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/api-platform/validator/zipball/7936503db0c9fd3411b8cf9fba234b22999656fd",
+                "reference": "7936503db0c9fd3411b8cf9fba234b22999656fd",
+                "shasum": ""
+            },
+            "require": {
+                "api-platform/metadata": "^3.4 || ^4.0",
+                "php": ">=8.1",
+                "symfony/web-link": "^6.4 || ^7.1"
+            },
+            "require-dev": {
+                "phpspec/prophecy-phpunit": "^2.2",
+                "phpunit/phpunit": "^11.2",
+                "symfony/http-kernel": "^6.4 || ^7.0",
+                "symfony/serializer": "^6.4 || ^7.0",
+                "symfony/validator": "^6.4 || ^7.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "4.0.x-dev",
+                    "dev-3.4": "3.4.x-dev"
+                },
+                "symfony": {
+                    "require": "^6.4 || ^7.1"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ApiPlatform\\Validator\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kévin Dunglas",
+                    "email": "kevin@dunglas.fr",
+                    "homepage": "https://dunglas.fr"
+                },
+                {
+                    "name": "API Platform Community",
+                    "homepage": "https://api-platform.com/community/contributors"
+                }
+            ],
+            "description": "API Platform validator component",
+            "homepage": "https://api-platform.com",
+            "keywords": [
+                "api",
+                "validator"
+            ],
+            "support": {
+                "issues": "https://github.com/api-platform/validator/issues",
+                "source": "https://github.com/api-platform/validator/tree/v4.0.0-alpha.5"
+            },
+            "time": "2024-09-06T06:35:15+00:00"
         },
         {
             "name": "brick/math",
@@ -10276,10 +11196,8 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
-    "stability-flags": {
-        "api-platform/core": 15
-    },
+    "minimum-stability": "alpha",
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
