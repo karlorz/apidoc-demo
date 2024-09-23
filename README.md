@@ -1,3 +1,11 @@
+## Install
+```console
+bash ./update-deps.sh
+docker compose up --force-recreate
+docker compose up --wait
+```
+You can now go to https://localhost
+
 <h1 align="center">
     <a href="https://api-platform.com">
         <img width="400" height="400" src="https://api-platform.com/images/zeus.svg" alt="API Platform">
