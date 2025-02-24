@@ -20,6 +20,7 @@ use App\Enum\BookCondition;
 use App\Repository\BookRepository;
 use App\State\Processor\BookPersistProcessor;
 use App\State\Processor\BookRemoveProcessor;
+use App\Validator\BookUrl;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
@@ -110,7 +111,7 @@ class Book
     #[ORM\CustomIdGenerator(class: UuidGenerator::class)]
     #[ORM\GeneratedValue(strategy: 'CUSTOM')]
     #[ORM\Id]
-    private ?Uuid $id = null;
+    private Uuid $id;
 
     /**
      * @see https://schema.org/itemOffered
@@ -121,10 +122,10 @@ class Book
     )]
     #[Assert\NotBlank(allowNull: false)]
     #[Assert\Url(protocols: ['https'], requireTld: true)]
-    #[Assert\Regex(pattern: '/^https:\/\/openlibrary.org\/books\/OL\d+[A-Z]{1}\.json$/')]
+    #[BookUrl]
     #[Groups(groups: ['Book:read', 'Book:read:admin', 'Bookmark:read', 'Book:write'])]
     #[ORM\Column(unique: true)]
-    public ?string $book = null;
+    public string $book;
 
     /**
      * @see https://schema.org/name
@@ -137,7 +138,7 @@ class Book
     )]
     #[Groups(groups: ['Book:read', 'Book:read:admin', 'Bookmark:read', 'Review:read:admin'])]
     #[ORM\Column(type: Types::TEXT)]
-    public ?string $title = null;
+    public string $title;
 
     /**
      * @see https://schema.org/author
@@ -162,7 +163,7 @@ class Book
     #[Assert\NotNull]
     #[Groups(groups: ['Book:read', 'Book:read:admin', 'Bookmark:read', 'Book:write'])]
     #[ORM\Column(name: '`condition`', type: 'string', enumType: BookCondition::class)]
-    public ?BookCondition $condition = null;
+    public BookCondition $condition;
 
     /**
      * An IRI of reviews.
@@ -197,7 +198,7 @@ class Book
         $this->reviews = new ArrayCollection();
     }
 
-    public function getId(): ?Uuid
+    public function getId(): Uuid
     {
         return $this->id;
     }

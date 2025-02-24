@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://github.com/SchemaStore/schemastore/blob/master/src/schemas/json/github-workflow.json
 name: CI
 
 on:
@@ -6,10 +7,22 @@ on:
       - main
       - \d+.\d+
   pull_request: ~
-  workflow_dispatch: ~
-  # Check api-platform packages with dev every sunday at 02:00
+  workflow_dispatch:
+    inputs:
+      minimum-stability:
+        description: 'Minimum stability'
+        required: false
+        default: 'stable'
+        type: choice
+        options:
+          - dev
+          - alpha
+          - beta
+          - RC
+          - stable
+  # Check api-platform packages with dev every day at 02:00
   schedule:
-    - cron: 0 2 * * 0
+    - cron: 0 2 * * *
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
@@ -31,7 +44,7 @@ jobs:
         uses: docker/setup-buildx-action@v3
       -
         name: Build Docker images
-        uses: docker/bake-action@v5
+        uses: docker/bake-action@v6
         with:
           pull: true
           load: true
@@ -52,10 +65,10 @@ jobs:
         name: Start services
         run: docker compose up --wait --no-build
       -
-        name: Update API Platform to latest
-        if: ${{ github.event_name == 'schedule' }}
+        name: Update API Platform
+        if: ${{ github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.minimum-stability != 'stable') }}
         run: |
-          docker compose exec php composer config minimum-stability dev
+          docker compose exec php composer config minimum-stability ${{ inputs.minimum-stability }}
           docker compose exec php composer update "api-platform/*"
       -
         name: Check HTTP reachability
@@ -130,7 +143,7 @@ jobs:
         run: echo "AUTH_SECRET=$(openssl rand -hex 32)" >> $GITHUB_ENV
       -
         name: Build Docker Images
-        uses: docker/bake-action@v5
+        uses: docker/bake-action@v6
         with:
           pull: true
           load: true
@@ -154,17 +167,16 @@ jobs:
         name: Start Services
         run: docker compose up --wait --no-build
       -
-        name: Update API Platform to latest
-        if: ${{ github.event_name == 'schedule' }}
+        name: Update API Platform
+        if: ${{ github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.minimum-stability != 'stable') }}
         run: |
-          docker compose exec php composer config minimum-stability dev
+          docker compose exec php composer config minimum-stability ${{ inputs.minimum-stability }}
           docker compose exec php composer update "api-platform/*"
       -
         name: Load Fixtures
         run: docker compose run --rm php bin/console doctrine:fixtures:load --no-interaction
       -
         name: Cache Playwright Binaries
-        id: playwright-cache
         uses: actions/cache@v4
         with:
           path: ~/.cache/ms-playwright
@@ -188,26 +200,14 @@ jobs:
         run: pnpm install
       -
         name: Install Playwright Browsers with Deps
-        if: steps.playwright-cache.outputs.cache-hit != 'true'
         working-directory: pwa
         run: pnpm exec playwright install --with-deps
       -
-        name: Install Playwright Browsers
-        if: steps.playwright-cache.outputs.cache-hit == 'true'
-        working-directory: pwa
-        run: pnpm exec playwright install
-      -
         name: Run Playwright
         working-directory: pwa
-        timeout-minutes: 3
+        timeout-minutes: 10
         # use 1 worker to prevent conflict between scenarios (longer but safer)
         run: pnpm exec playwright test --workers=1 --grep ${{ matrix.annotation }}
-      -
-        name: Debug Services
-        if: failure()
-        run: |
-          docker compose ps
-          docker compose logs
       -
         name: Debug Services
         if: failure()
